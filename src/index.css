@@ -156,14 +156,8 @@ input[type="checkbox"] {
   .stats {
     font-size: 0.8em;
   }
-  .list ul {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
 }
 @media (max-width: 410px) {
-  .list ul {
-    grid-template-columns: auto;
-  }
   h1 {
     font-size: 4rem;
   }
