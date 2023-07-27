@@ -3,7 +3,7 @@ const Item = ({ item, OnDeleteItems, OnToggleItem }) => {
         <li>
             <input
                 type="checkbox"
-                value={item.packed}
+                checked={item.packed}
                 onChange={() => {
                     OnToggleItem(item.id);
                 }}
