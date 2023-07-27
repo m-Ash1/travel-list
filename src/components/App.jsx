@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./Form";
 import Logo from "./Logo";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
 
 const App = () => {
-  const [items, setItems] = useState([]);
-
+  const retrievedData = JSON.parse(localStorage.getItem('items')) || []
+  const [items, setItems] = useState(retrievedData);
   //* Handler functions
 
   const handleNewItem = (newItem) => {
@@ -29,6 +29,12 @@ const App = () => {
       setItems([]);
     }
   };
+
+  // add local storage to the app (for dodo)
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(items))
+  }, [items])
+
 
   return (
     <div className="app">
