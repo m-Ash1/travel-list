@@ -156,6 +156,14 @@ input[type="checkbox"] {
   .stats {
     font-size: 0.8em;
   }
+  .actions button,
+  .list select {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .actions {
+    padding: 2.8rem;
+  }
 }
 @media (max-width: 410px) {
   h1 {
